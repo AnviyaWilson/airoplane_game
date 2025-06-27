@@ -11,23 +11,11 @@ body {
 }
 
 #game {
- #game {
   position: relative;
   width: 100vw;
   height: 80vh;
   overflow: hidden;
-  background-color: skyblue; /* example background */
-}
-
-.obstacle {
-  position: absolute;
-}
-
-
-  /* 🌥️ Background scrolling cloud effect */
-  background: url("assets/clouds-bg.png") repeat-x skyblue;
-  background-size: cover;
-  animation: scrollBg 20s linear infinite;
+  background-color: skyblue; /* ✅ Plain blue background */
 }
 
 @keyframes scrollBg {
@@ -44,12 +32,13 @@ body {
   width: 200px;
   top: 200px;
   left: 80px;
-  transition: top 0.1s ease-in-out; /* ✨ Smooth jump */
+  transition: top 0.1s ease-in-out;
 }
 
 .obstacle {
   position: absolute;
   width: 80px;
+  height: auto;
   bottom: 0;
   left: 100vw;
 }
@@ -87,16 +76,6 @@ body {
   border-radius: 8px;
   cursor: pointer;
 }
-#game {
-  background: url("assets/clouds-bg.png") repeat-x skyblue;
-  background-size: cover;
-  animation: scrollBg 20s linear infinite;
-}
-
-.obstacle {
-  position: absolute;
-  height: auto;
-}
 
 #scoreBoard {
   position: absolute;
@@ -105,6 +84,36 @@ body {
   color: white;
   font-size: 20px;
 }
+
+/* ✅ Responsive for small screens */
+@media (max-width: 600px) {
+  #plane {
+    width: 120px;
+    left: 40px;
+  }
+
+  .obstacle {
+    width: 50px;
+  }
+
+  #score {
+    font-size: 18px;
+  }
+
+  #gameOver {
+    font-size: 32px;
+  }
+
+  #restartBtn {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+
+  #scoreBoard {
+    font-size: 16px;
+  }
+}
+
 
 
 
