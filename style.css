@@ -13,18 +13,9 @@ body {
 #game {
   position: relative;
   width: 100vw;
-  height: 80vh;
+  height: 100vh; /* ✅ Full screen height for all devices */
   overflow: hidden;
   background-color: skyblue; /* ✅ Plain blue background */
-}
-
-@keyframes scrollBg {
-  from {
-    background-position-x: 0;
-  }
-  to {
-    background-position-x: -1000px;
-  }
 }
 
 #plane {
@@ -85,7 +76,7 @@ body {
   font-size: 20px;
 }
 
-/* ✅ Responsive for small screens */
+/* ✅ Responsive for small screens (phones) */
 @media (max-width: 600px) {
   #plane {
     width: 120px;
@@ -113,6 +104,7 @@ body {
     font-size: 16px;
   }
 }
+
 
 
 
