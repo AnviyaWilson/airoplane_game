@@ -8,18 +8,19 @@ body {
   background: skyblue;
   font-family: Arial, sans-serif;
   text-align: center;
-  height: 100dvh;
+  height: 100vh;
   overflow: hidden;
 }
 
 #game {
   position: relative;
   width: 100vw;
-  height: 100dvh; /* ✅ Truly fills entire phone screen */
+  height: 100vh; /* Default: full height on big screens */
   overflow: hidden;
   background-color: skyblue;
 }
 
+/* ✈️ Plane */
 #plane {
   position: absolute;
   width: 200px;
@@ -28,6 +29,7 @@ body {
   transition: top 0.1s ease-in-out;
 }
 
+/* 🧱 Obstacles */
 .obstacle {
   position: absolute;
   width: 80px;
@@ -36,6 +38,7 @@ body {
   left: 100vw;
 }
 
+/* 🧮 Score */
 #score {
   position: absolute;
   top: 10px;
@@ -81,8 +84,15 @@ body {
   font-size: 20px;
 }
 
-/* ✅ Responsive fix for small screens */
+/* ✅ Smaller play window on phones */
 @media (max-width: 600px) {
+  #game {
+    height: 400px; /* 🎯 Smaller screen so you see everything */
+    margin: 20px auto;
+    border: 2px solid #333;
+    border-radius: 12px;
+  }
+
   #plane {
     width: 120px;
     left: 40px;
@@ -109,6 +119,7 @@ body {
     font-size: 16px;
   }
 }
+
 
 
 
