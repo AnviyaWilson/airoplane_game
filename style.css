@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: skyblue;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#game {
+ #game {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  overflow: hidden;
+  background-color: skyblue; /* example background */
+}
+
+.obstacle {
+  position: absolute;
+}
+
+
+  /* 🌥️ Background scrolling cloud effect */
+  background: url("assets/clouds-bg.png") repeat-x skyblue;
+  background-size: cover;
+  animation: scrollBg 20s linear infinite;
+}
+
+@keyframes scrollBg {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -1000px;
+  }
+}
+
+#plane {
+  position: absolute;
+  width: 200px;
+  top: 200px;
+  left: 80px;
+  transition: top 0.1s ease-in-out; /* ✨ Smooth jump */
+}
+
+.obstacle {
+  position: absolute;
+  width: 80px;
+  bottom: 0;
+  left: 100vw;
+}
+
+#score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+#gameOver {
+  display: none;
+  font-size: 48px;
+  color: red;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#restartBtn {
+  display: none;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  padding: 10px 20px;
+  border: none;
+  background: #4caf50;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#game {
+  background: url("assets/clouds-bg.png") repeat-x skyblue;
+  background-size: cover;
+  animation: scrollBg 20s linear infinite;
+}
+
+.obstacle {
+  position: absolute;
+  height: auto;
+}
+
+#scoreBoard {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+
+
+
